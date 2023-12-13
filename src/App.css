@@ -1,4 +1,14 @@
 #root {
-  margin: 0 auto;
-  padding: 2rem;
+	margin: 0 auto;
+	padding: 2rem;
+}
+
+.code-editor-style::before {
+	content: "<>";
+	margin-bottom: 5px;
+}
+
+.code-editor-style::after {
+	content: "</>";
+	margin-top: 5px;
 }

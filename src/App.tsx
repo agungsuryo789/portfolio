@@ -4,6 +4,7 @@ import Navbar from "./Components/Navbar";
 import "./App.css";
 import profilePicture from "./assets/profile-vector.jpg";
 import codingPicture from "./assets/coding-vector.svg";
+import reactIcon from "./assets/react.svg";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -19,7 +20,7 @@ function App() {
           <h1 className="text-4xl uppercase font-bold tracking-widest">
             Front-end React Developer
           </h1>
-          <p className="text-base my-4 italic">
+          <p className="my-4 italic">
             Hi,{" "}
             <span className="font-extrabold hover:not-italic">
               i'm Agung Suryo
@@ -37,6 +38,30 @@ function App() {
         </div>
       </section>
 
+      <section className="tracking-widest my-20">
+        <h1 className="text-4xl text-center uppercase font-bold tracking-widest my-10">
+          My Expertise
+        </h1>
+        <div className="grid grid-rows-2 border-2 border-white sm:grid-cols-2">
+          <div className="flex flex-row text-center p-6">
+            <img src={reactIcon} alt="react icon" className="w-10" />
+            <h1 className="underline decoration-teal-400 decoration-4 uppercase font-bold text-2xl m-auto">
+              Frontend Developer
+            </h1>
+          </div>
+          <div className="text-center p-6">
+            <p className="code-editor-style">
+              <br />
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+              accusantium at ullam perspiciatis tempore esse nostrum deserunt
+              est laborum ea. Tenetur corporis velit repudiandae tempora, natus
+              corrupti voluptatibus eveniet molestiae.
+              <br />
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="grid grid-rows-2 items-center my-20 sm:grid-cols-4">
         <div className="col-span-2">
           <img
@@ -46,8 +71,8 @@ function App() {
           />
         </div>
         <div className="col-span-2 tracking-widest">
-          <h1 className="text-5xl uppercase font-bold tracking-widest">
-            My Expertise
+          <h1 className="text-4xl uppercase font-bold tracking-widest">
+            Over The Years
           </h1>
           <p className="my-4">
             As Frontend Developer, I've built various websites and web
@@ -61,16 +86,9 @@ function App() {
             company.
           </p>
           <p className="my-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse in
-            natus rerum recusandae dicta omnis impedit, quam temporibus quae
-            maiores officiis obcaecati placeat ab eius doloremque, enim, illum
-            fugiat provident?
-          </p>
-          <p className="my-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse in
-            natus rerum recusandae dicta omnis impedit, quam temporibus quae
-            maiores officiis obcaecati placeat ab eius doloremque, enim, illum
-            fugiat provident?
+            Before now, I was Frontend Engineer at VHP Software(Sindata), where
+            I worked on a suite of tools and services tailored towards Hotel
+            Management Software for all need of the hotel industry.
           </p>
         </div>
       </section>
