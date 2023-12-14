@@ -1,8 +1,6 @@
-import { useState } from "react";
 import Navbar from "./Components/Navbar";
 
 import "./App.css";
-import profilePicture from "./assets/profile-vector.jpg";
 import codingPicture from "./assets/coding-vector.svg";
 import reactIcon from "./assets/react.svg";
 import linkedIcon from "./assets/linkedin-svgrepo-com.svg";
@@ -19,7 +17,6 @@ interface Project {
 }
 
 function App() {
-  const [count, setCount] = useState(0);
 
   const data: Project[] = [
     {
