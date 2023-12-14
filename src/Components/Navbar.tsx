@@ -11,7 +11,7 @@ const Navbar: React.FC<Props> = ({ title }) => {
   return (
     <nav className="grid grid-cols-4">
       <div className="col-span-2 text-left">
-        <h1 className="text-3xl uppercase font-bold">{title}</h1>
+        <h1 className="text-3xl uppercase font-bold title-logo animate-pulse">{title}</h1>
       </div>
       <div className="col-span-2 text-right">
         <Button className="bg-transparent" onClick={() => setIsOpen(!isOpen)}>
