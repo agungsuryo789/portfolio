@@ -1,45 +1,45 @@
 import Navbar from "./Components/Navbar";
 
 import "./App.css";
-import codingPicture from "./assets/coding-vector.svg";
-import reactIcon from "./assets/react.svg";
+// import codingPicture from "./assets/coding-vector.svg";
+// import reactIcon from "./assets/react.svg";
 import linkedIcon from "./assets/linkedin-svgrepo-com.svg";
 import githubIcon from "./assets/github-svgrepo-com.svg";
-import undrawWebsite from "./assets/undraw_website.svg";
+// import undrawWebsite from "./assets/undraw_website.svg";
 import photoProfile from "./assets/vector-photo.svg";
 
-interface Project {
-  title: string;
-  img: string;
-  desc: string;
-  url: string;
-  tech: string[];
-}
+// interface Project {
+//   title: string;
+//   img: string;
+//   desc: string;
+//   url: string;
+//   tech: string[];
+// }
 
 function App() {
-  const data: Project[] = [
-    {
-      title: "Title 1",
-      img: undrawWebsite,
-      desc: "lorem ipsum dolor sit amet, consectetur",
-      url: "https://github.com/",
-      tech: ["react", "redux", "typescript"],
-    },
-    {
-      title: "Title 2",
-      img: undrawWebsite,
-      desc: "lorem ipsum dolor sit amet, consectetur",
-      url: "https://github.com/",
-      tech: ["react", "redux", "typescript"],
-    },
-    {
-      title: "Title 3",
-      img: undrawWebsite,
-      desc: "lorem ipsum dolor sit amet, consectetur",
-      url: "https://github.com/",
-      tech: ["react", "redux", "typescript"],
-    },
-  ];
+  //   const data: Project[] = [
+  //     {
+  //       title: "Title 1",
+  //       img: undrawWebsite,
+  //       desc: "lorem ipsum dolor sit amet, consectetur",
+  //       url: "https://github.com/",
+  //       tech: ["react", "redux", "typescript"],
+  //     },
+  //     {
+  //       title: "Title 2",
+  //       img: undrawWebsite,
+  //       desc: "lorem ipsum dolor sit amet, consectetur",
+  //       url: "https://github.com/",
+  //       tech: ["react", "redux", "typescript"],
+  //     },
+  //     {
+  //       title: "Title 3",
+  //       img: undrawWebsite,
+  //       desc: "lorem ipsum dolor sit amet, consectetur",
+  //       url: "https://github.com/",
+  //       tech: ["react", "redux", "typescript"],
+  //     },
+  //   ];
 
   return (
     <>
@@ -92,7 +92,7 @@ function App() {
           />
         </div>
       </section>
-{/* 
+      {/* 
       <section className="tracking-widest">
         <h1 className="text-4xl text-center uppercase font-bold tracking-widest my-10">
           <span className="text-gray-500">/</span>My_Expertise
