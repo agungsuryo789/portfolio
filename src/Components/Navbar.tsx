@@ -14,16 +14,16 @@ const Navbar: React.FC<Props> = ({ title, docTitle }) => {
   }, []);
 
   return (
-    <nav className="grid grid-cols-4">
-      <div className="col-span-2 justify-start">
+    <nav className="flex flex-row justify-between">
+      <div>
         <a href={`/`}>
           <h1 className="text-3xl uppercase font-bold title-logo animate-pulse">
             {title}
           </h1>
         </a>
       </div>
-      <div className="col-span-2 hidden lg:inline-block">
-        <ul className="flex flex-row justify-end list-none">
+      <div className="hidden lg:inline-block">
+        <ul className="flex flex-row justify-end list-none text-lg">
           <li className="m-2">
             <a href={`/about`}>
               <span className="text-gray-500">/</span>
@@ -42,9 +42,15 @@ const Navbar: React.FC<Props> = ({ title, docTitle }) => {
               <b>Projects</b>
             </a>
           </li>
+          <li className="m-2 text-xl">
+            <a href={`#`} target="__blank">
+              <span className="text-gray-500">{`>`}</span>
+              <b className="text-cyan-500">Resume</b>
+            </a>
+          </li>
         </ul>
       </div>
-      <div className="col-span-2 text-right lg:hidden">
+      <div className="relative text-right lg:hidden">
         <Button
           className="bg-transparent m-2"
           onClick={() => setIsOpen(!isOpen)}
@@ -79,6 +85,39 @@ const Navbar: React.FC<Props> = ({ title, docTitle }) => {
             </svg>
           )}
         </Button>
+
+        <div
+          className={`absolute top-8 right-1 border-1 w-36 p-2 shadow-lg bg-white ${
+            isOpen ? "display-block" : "hidden"
+          }`}
+        >
+          <ul className="list-none text-lg">
+            <li className="m-2">
+              <a href={`/about`}>
+                <span className="text-gray-500">/</span>
+                <b>About</b>
+              </a>
+            </li>
+            <li className="m-2">
+              <a href={`/resume`}>
+                <span className="text-gray-500">/</span>
+                <b>Experience</b>
+              </a>
+            </li>
+            <li className="m-2">
+              <a href={`/projects`}>
+                <span className="text-gray-500">/</span>
+                <b>Projects</b>
+              </a>
+            </li>
+            <li className="m-2 text-xl">
+              <a href={`#`} target="__blank">
+                <span className="text-gray-500">{`>`}</span>
+                <b className="text-cyan-500">Resume</b>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
   );

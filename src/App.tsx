@@ -45,18 +45,16 @@ function App() {
     <>
       <Navbar title="Agung.dev_" docTitle="Agung Suryo Sundoro" />
 
-      <section className="flex flex-col justify-center items-center lg:flex-row sm:order-last">
+      <section className="flex flex-col justify-center items-center relative lg:flex-row sm:order-last">
         <div className="lg:flex-1 text-left tracking-widest my-10 lg:my-2">
-          <h1 className="text-4xl uppercase font-bold tracking-widest">
-            Front-end Developer
+          <span className="text-cyan-400 font-bold">Hi, my name is</span>
+          <h1 className="text-3xl uppercase font-bold tracking-widest my-2">
+            Agung Suryo Sundoro
           </h1>
           <p className="my-4 italic">
-            Hi,{" "}
-            <span className="font-extrabold hover:not-italic">
-              i'm Agung Suryo
-            </span>
-            . I'm a Front-end Developer based in Indonesia. I like to craft
-            solid and scalable frontend products with great user experiences.
+            I'm a skilled front-end developer weaving magic with HTML, CSS, and
+            JavaScript to create visually captivating interfaces. With a
+            burgeoning interest in the full-stack landscape.
           </p>
 
           <div className="flex flex-row">
@@ -91,7 +89,26 @@ function App() {
             alt="Profile Picture"
           />
         </div>
+
+        <a href={`/about`} className="text-lg font-bold flex flex-row animate-bounce absolute left-1 bottom-32">
+          Explore My Story
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            className="w-6 h-6 m-auto"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+            />
+          </svg>
+        </a>
       </section>
+
       {/* 
       <section className="tracking-widest">
         <h1 className="text-4xl text-center uppercase font-bold tracking-widest my-10">
