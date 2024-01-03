@@ -1,20 +1,54 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Button from "./UI/Button";
 
 interface Props {
   title: string;
+  docTitle?: string;
 }
 
-const Navbar: React.FC<Props> = ({ title }) => {
+const Navbar: React.FC<Props> = ({ title, docTitle }) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    document.title = docTitle || "";
+  }, []);
 
   return (
     <nav className="grid grid-cols-4">
-      <div className="col-span-2 text-left">
-        <h1 className="text-3xl uppercase font-bold title-logo animate-pulse">{title}</h1>
+      <div className="col-span-2 justify-start">
+        <a href={`/`}>
+          <h1 className="text-3xl uppercase font-bold title-logo animate-pulse">
+            {title}
+          </h1>
+        </a>
       </div>
-      <div className="col-span-2 text-right">
-        <Button className="bg-transparent" onClick={() => setIsOpen(!isOpen)}>
+      <div className="col-span-2 hidden lg:inline-block">
+        <ul className="flex flex-row justify-end list-none">
+          <li className="m-2">
+            <a href={`/about`}>
+              <span className="text-gray-500">/</span>
+              <b>About</b>
+            </a>
+          </li>
+          <li className="m-2">
+            <a href={`/resume`}>
+              <span className="text-gray-500">/</span>
+              <b>Experience</b>
+            </a>
+          </li>
+          <li className="m-2">
+            <a href={`/projects`}>
+              <span className="text-gray-500">/</span>
+              <b>Projects</b>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div className="col-span-2 text-right lg:hidden">
+        <Button
+          className="bg-transparent m-2"
+          onClick={() => setIsOpen(!isOpen)}
+        >
           {!isOpen ? (
             <svg
               className="h-6 w-6"

@@ -17,7 +17,6 @@ interface Project {
 }
 
 function App() {
-
   const data: Project[] = [
     {
       title: "Title 1",
@@ -44,12 +43,10 @@ function App() {
 
   return (
     <>
-      <header className="py-4">
-        <Navbar title="Agung.dev_" />
-      </header>
+      <Navbar title="Agung.dev_" docTitle="Agung Suryo Sundoro" />
 
-      <section className="grid grid-rows-2 items-center sm:grid-cols-4">
-        <div className="col-span-2 text-left tracking-widest">
+      <section className="flex flex-col justify-center items-center lg:flex-row sm:order-last">
+        <div className="lg:flex-1 text-left tracking-widest my-10 lg:my-2">
           <h1 className="text-4xl uppercase font-bold tracking-widest">
             Front-end Developer
           </h1>
@@ -87,15 +84,15 @@ function App() {
             </a>
           </div>
         </div>
-        <div className="col-span-2 order-first sm:order-last">
+        <div className="lg:flex-none order-first my-10 sm:order-last lg:my-2">
           <img
-            className="rounded-full shadow-md m-auto w-1/2 transform-gpu transition-transform duration-300 hover:scale-105 hover:rotate-6 hover:shadow-xl"
+            className="rounded-full w-auto transform-gpu transition-transform duration-300 hover:scale-105 hover:rotate-6 hover:shadow-xl"
             src={photoProfile}
             alt="Profile Picture"
           />
         </div>
       </section>
-
+{/* 
       <section className="tracking-widest">
         <h1 className="text-4xl text-center uppercase font-bold tracking-widest my-10">
           <span className="text-gray-500">/</span>My_Expertise
@@ -173,7 +170,7 @@ function App() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
     </>
   );
 }
