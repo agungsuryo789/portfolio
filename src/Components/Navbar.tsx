@@ -31,7 +31,7 @@ const Navbar: React.FC<Props> = ({ title, docTitle }) => {
             </a>
           </li>
           <li className="m-2">
-            <a href={`/resume`}>
+            <a href={`/experience`}>
               <span className="text-gray-500">/</span>
               <b>Experience</b>
             </a>
@@ -99,7 +99,7 @@ const Navbar: React.FC<Props> = ({ title, docTitle }) => {
               </a>
             </li>
             <li className="m-2">
-              <a href={`/resume`}>
+              <a href={`/experience`}>
                 <span className="text-gray-500">/</span>
                 <b>Experience</b>
               </a>

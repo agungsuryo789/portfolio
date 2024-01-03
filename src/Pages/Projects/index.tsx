@@ -1,11 +1,15 @@
-import Navbar from '../../Components/Navbar'
+import Navbar from "../../Components/Navbar";
 
-type Props = {}
-
-function Projects({}: Props) {
-  return (
-	<><Navbar title="Agung.dev_" docTitle="Agung Suryo Sundoro | Projects" /></>
-  )
+interface ProjectsProps {
+  className?: string;
 }
 
-export default Projects
+const Projects: React.FC<ProjectsProps> = ({ className }) => {
+  return (
+    <div className={className}>
+      <Navbar title="Agung.dev_" docTitle="Agung Suryo Sundoro | Projects" />
+    </div>
+  );
+};
+
+export default Projects;

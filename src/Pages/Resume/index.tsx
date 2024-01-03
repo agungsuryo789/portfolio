@@ -1,11 +1,15 @@
-import Navbar from '../../Components/Navbar'
+import Navbar from "../../Components/Navbar";
 
-type Props = {}
-
-function Resume({}: Props) {
-  return (
-	<><Navbar title="Agung.dev_" docTitle="Agung Suryo Sundoro | Experience" /></>
-  )
+interface ExperienceProps {
+  className?: string;
 }
 
-export default Resume
+const Resume: React.FC<ExperienceProps> = ({ className }) => {
+  return (
+    <div className={className}>
+      <Navbar title="Agung.dev_" docTitle="Agung Suryo Sundoro | Experience" />
+    </div>
+  );
+};
+
+export default Resume;

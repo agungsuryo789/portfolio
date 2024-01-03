@@ -13,6 +13,23 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+@keyframes slideInFromLeft {
+	0% {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+.slide-in-from-left {
+	animation: slideInFromLeft 0.25s ease-in-out;
+	-webkit-animation: slideInFromLeft 0.25s ease-in-out;
+}
+
 @media (prefers-color-scheme: light) {
 	:root {
 		color: #213547;

@@ -1,48 +1,17 @@
 import Navbar from "./Components/Navbar";
 
 import "./App.css";
-// import codingPicture from "./assets/coding-vector.svg";
-// import reactIcon from "./assets/react.svg";
 import linkedIcon from "./assets/linkedin-svgrepo-com.svg";
 import githubIcon from "./assets/github-svgrepo-com.svg";
-// import undrawWebsite from "./assets/undraw_website.svg";
 import photoProfile from "./assets/vector-photo.svg";
 
-// interface Project {
-//   title: string;
-//   img: string;
-//   desc: string;
-//   url: string;
-//   tech: string[];
-// }
+interface AppProps {
+  className?: string;
+}
 
-function App() {
-  //   const data: Project[] = [
-  //     {
-  //       title: "Title 1",
-  //       img: undrawWebsite,
-  //       desc: "lorem ipsum dolor sit amet, consectetur",
-  //       url: "https://github.com/",
-  //       tech: ["react", "redux", "typescript"],
-  //     },
-  //     {
-  //       title: "Title 2",
-  //       img: undrawWebsite,
-  //       desc: "lorem ipsum dolor sit amet, consectetur",
-  //       url: "https://github.com/",
-  //       tech: ["react", "redux", "typescript"],
-  //     },
-  //     {
-  //       title: "Title 3",
-  //       img: undrawWebsite,
-  //       desc: "lorem ipsum dolor sit amet, consectetur",
-  //       url: "https://github.com/",
-  //       tech: ["react", "redux", "typescript"],
-  //     },
-  //   ];
-
+const App: React.FC<AppProps> = ({ className }) => {
   return (
-    <>
+    <div className={className}>
       <Navbar title="Agung.dev_" docTitle="Agung Suryo Sundoro" />
 
       <section className="flex flex-col justify-center items-center relative lg:flex-row sm:order-last">
@@ -90,7 +59,10 @@ function App() {
           />
         </div>
 
-        <a href={`/about`} className="text-lg font-bold flex flex-row animate-bounce absolute left-1 bottom-32">
+        <a
+          href={`/about`}
+          className="text-lg font-bold flex flex-row animate-bounce absolute left-1 bottom-32"
+        >
           Explore My Story
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -188,7 +160,7 @@ function App() {
           ))}
         </div>
       </section> */}
-    </>
+    </div>
   );
 }
 
