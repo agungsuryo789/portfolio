@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 
 import "./App.css";
 import linkedIcon from "./assets/linkedin-svgrepo-com.svg";
 import githubIcon from "./assets/github-svgrepo-com.svg";
-import photoProfile from "./assets/vector-photo.svg";
+
 
 interface AppProps {
   className?: string;
@@ -14,12 +15,13 @@ const App: React.FC<AppProps> = ({ className }) => {
     <div className={className}>
       <Navbar title="Agung.dev_" docTitle="Agung Suryo Sundoro" />
 
-      <section className="flex flex-col justify-center items-center relative lg:flex-row sm:order-last">
+      <section className="flex flex-col justify-center items-center relative px-20 lg:flex-row sm:order-last">
         <div className="lg:flex-1 text-left tracking-widest my-10 lg:my-2">
           <span className="text-cyan-400 font-bold">Hi, my name is</span>
           <h1 className="text-3xl uppercase font-bold tracking-widest my-2">
             Agung Suryo Sundoro
           </h1>
+		  <p className="text-xl font-semibold">I like to code fun stuff.</p>
           <p className="my-4 italic">
             I'm a skilled front-end developer weaving magic with HTML, CSS, and
             JavaScript to create visually captivating interfaces. With a
@@ -51,19 +53,13 @@ const App: React.FC<AppProps> = ({ className }) => {
             </a>
           </div>
         </div>
-        <div className="lg:flex-none order-first my-10 sm:order-last lg:my-2">
-          <img
-            className="rounded-full w-auto transform-gpu transition-transform duration-300 hover:scale-105 hover:rotate-6 hover:shadow-xl"
-            src={photoProfile}
-            alt="Profile Picture"
-          />
-        </div>
+        
 
-        <a
-          href={`/about`}
-          className="text-lg font-bold flex flex-row animate-bounce absolute left-1 bottom-32"
+        <Link
+          to={`/about`}
+          className="text-lg font-bold flex flex-row animate-bounce absolute left-20 bottom-32"
         >
-          Explore My Story
+          Learn more
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -78,88 +74,8 @@ const App: React.FC<AppProps> = ({ className }) => {
               d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
             />
           </svg>
-        </a>
+        </Link>
       </section>
-
-      {/* 
-      <section className="tracking-widest">
-        <h1 className="text-4xl text-center uppercase font-bold tracking-widest my-10">
-          <span className="text-gray-500">/</span>My_Expertise
-        </h1>
-        <div className="grid grid-rows-2 border-double border-4 border-black sm:grid-cols-1">
-          <div className="flex flex-row justify-center align-center p-6">
-            <img src={reactIcon} alt="react icon" className="w-10" />
-            <h1 className="tracking-widest uppercase font-bold text-2xl my-auto mx-2">
-              <span className="custom-underline-blue">Frontend Dev</span>
-              <br />
-              React, Vue
-            </h1>
-          </div>
-          <div className="font-bold text-center p-6">
-            <p>
-              Over 2 years of UI Development. Experienced in HTML, CSS,
-              Javascript, React, Vue, Typescript, Nuxtjs, Tailwind CSS.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="grid grid-rows-2 items-center sm:grid-cols-4">
-        <div className="col-span-2">
-          <img
-            className="h-full"
-            src={codingPicture}
-            alt="Man coding, vector style"
-          />
-        </div>
-        <div className="col-span-2 tracking-widest">
-          <h1 className="text-4xl uppercase font-bold tracking-widest">
-            <span className="text-gray-500">/</span>Over_The_Years
-          </h1>
-          <p className="my-4">
-            As Frontend Developer, I've built various websites and web
-            application for companies ranging from marketing websites to complex
-            solutions such as B2B E-Commerce apps with focus on fast, elegant
-            and accessible user experiences.
-          </p>
-          <p>
-            Currently, I work at CODR as a Frontend Engineer crafting thoughtful
-            and inclusive experiences that adhere to web standards for B2B
-            company.
-          </p>
-          <p className="my-4">
-            Before now, I was Frontend Engineer at VHP Software(Sindata), where
-            I worked on a suite of tools and services tailored towards Hotel
-            Management Software for all need of the hotel industry.
-          </p>
-        </div>
-      </section>
-
-      <section>
-        <h1 className="text-4xl text-center uppercase font-bold tracking-widest my-10">
-          <span className="text-gray-500">/</span>Projects
-        </h1>
-        <div className="grid grid-rows-2 gap-4 sm:grid-cols-2">
-          {data.map((item, i) => (
-            <div className="p-4 shadow-md rounded-lg hover:shadow-xl" key={i}>
-              <a href={item.url} target="_blank">
-                <img className="w-1/2 m-auto" src={item.img} alt="" />
-              </a>
-              <h3 className="font-bold">{item.title}</h3>
-              <p>{item.desc}</p>
-              <div className="flex flex-row">
-                {item.tech.length > 0
-                  ? item.tech.map((tech) => (
-                      <span className="p-2 shadow-lg rounded-sm font-bold">
-                        {tech}
-                      </span>
-                    ))
-                  : null}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section> */}
     </div>
   );
 }

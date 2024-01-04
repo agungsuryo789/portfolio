@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+
 import Button from "./UI/Button";
 
 interface Props {
@@ -16,31 +18,31 @@ const Navbar: React.FC<Props> = ({ title, docTitle }) => {
   return (
     <nav className="flex flex-row justify-between">
       <div>
-        <a href={`/`}>
+        <Link to={`/`}>
           <h1 className="text-3xl uppercase font-bold title-logo animate-pulse">
             {title}
           </h1>
-        </a>
+        </Link>
       </div>
       <div className="hidden lg:inline-block">
         <ul className="flex flex-row justify-end list-none text-lg">
           <li className="m-2">
-            <a href={`/about`}>
+            <Link to="/about">
               <span className="text-gray-500">/</span>
               <b>About</b>
-            </a>
+            </Link>
           </li>
           <li className="m-2">
-            <a href={`/experience`}>
+            <Link to={`/experience`}>
               <span className="text-gray-500">/</span>
               <b>Experience</b>
-            </a>
+            </Link>
           </li>
           <li className="m-2">
-            <a href={`/projects`}>
+            <Link to={`/projects`}>
               <span className="text-gray-500">/</span>
               <b>Projects</b>
-            </a>
+            </Link>
           </li>
           <li className="m-2 text-xl">
             <a href={`#`} target="__blank">
@@ -93,22 +95,22 @@ const Navbar: React.FC<Props> = ({ title, docTitle }) => {
         >
           <ul className="list-none text-lg">
             <li className="m-2">
-              <a href={`/about`}>
+              <Link to={`/about`}>
                 <span className="text-gray-500">/</span>
                 <b>About</b>
-              </a>
+              </Link>
             </li>
             <li className="m-2">
-              <a href={`/experience`}>
+              <Link to={`/experience`}>
                 <span className="text-gray-500">/</span>
                 <b>Experience</b>
-              </a>
+              </Link>
             </li>
             <li className="m-2">
-              <a href={`/projects`}>
+              <Link to={`/projects`}>
                 <span className="text-gray-500">/</span>
                 <b>Projects</b>
-              </a>
+              </Link>
             </li>
             <li className="m-2 text-xl">
               <a href={`#`} target="__blank">
