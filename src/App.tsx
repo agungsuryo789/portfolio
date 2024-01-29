@@ -1,83 +1,96 @@
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+
+import Home from "./Pages/Home";
 import Navbar from "./Components/Navbar";
 
 import "./App.css";
-import linkedIcon from "./assets/linkedin-svgrepo-com.svg";
-import githubIcon from "./assets/github-svgrepo-com.svg";
-
 
 interface AppProps {
   className?: string;
 }
 
 const App: React.FC<AppProps> = ({ className }) => {
+  const [isVisibleScroll, setIsVisibleScroll] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsVisibleScroll(true);
+      } else {
+        setIsVisibleScroll(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleScrollToView = (element: string) => {
+    const targetElement = document.getElementById(element);
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest",
+      });
+    }
+  };
+
+  const handleScrolltoTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <div className={className}>
-      <Navbar title="Agung.dev_" docTitle="Agung Suryo Sundoro" />
+    <div className={`snap-y`}>
+      <Navbar
+        title="Agung"
+        docTitle="Agung Suryo Sundoro"
+        scrollToView={handleScrollToView}
+      />
 
-      <section className="flex flex-col justify-center items-center relative px-20 lg:flex-row sm:order-last">
-        <div className="lg:flex-1 text-left tracking-widest my-10 lg:my-2">
-          <span className="text-cyan-400 font-bold">Hi, my name is</span>
-          <h1 className="text-3xl uppercase font-bold tracking-widest my-2">
-            Agung Suryo Sundoro
-          </h1>
-		  <p className="text-xl font-semibold">I like to code fun stuff.</p>
-          <p className="my-4 italic">
-            I'm a skilled front-end developer weaving magic with HTML, CSS, and
-            JavaScript to create visually captivating interfaces. With a
-            burgeoning interest in the full-stack landscape.
-          </p>
+      <Home />
 
-          <div className="flex flex-row">
-            <a
-              className="shadow-lg m-2 hover:shadow-xl"
-              href="https://www.linkedin.com/in/agungsuryo/"
-              target="_blank"
-            >
-              <img
-                className="bg-white w-10 rounded-md border-2 border-black"
-                src={linkedIcon}
-                alt="linkedin icon"
-              />
-            </a>
-            <a
-              className="shadow-lg m-2 hover:shadow-xl"
-              href="https://github.com/agungsuryo789"
-              target="_blank"
-            >
-              <img
-                className="bg-white w-10 rounded-md"
-                src={githubIcon}
-                alt="github icon"
-              />
-            </a>
-          </div>
-        </div>
-        
-
-        <Link
-          to={`/about`}
-          className="text-lg font-bold flex flex-row animate-bounce absolute left-20 bottom-32"
-        >
-          Learn more
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            className="w-6 h-6 m-auto"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
-            />
-          </svg>
-        </Link>
+      <section
+        id="about"
+        className="flex flex-col snap-start justify-center items-center relative px-20 lg:flex-row sm:order-last"
+      >
+        <h1 className="uppercase text-5xl font-extrabold tracking-widest">
+          About
+        </h1>
       </section>
+
+      <section
+        id="experience"
+        className="flex flex-col snap-start justify-center items-center relative px-20 lg:flex-row sm:order-last"
+      >
+        <h1 className="uppercase text-5xl font-extrabold tracking-widest">
+          Experience
+        </h1>
+      </section>
+
+      <section
+        id="projects"
+        className="flex flex-col snap-start justify-center items-center relative px-20 lg:flex-row sm:order-last"
+      >
+        <h1 className="uppercase text-5xl font-extrabold tracking-widest">
+          Projects
+        </h1>
+      </section>
+
+      <button
+        className={`fixed bottom-10 right-0 rounded-full p-2 border-2 border-cyan-900 z-50 m-2 w-14 h-14 ${!isVisibleScroll ? "hidden" : "block"}`}
+        onClick={handleScrolltoTop}
+      >
+        <i className="fa fa-angle-double-up" aria-hidden="true"></i>
+      </button>
     </div>
   );
-}
+};
 
 export default App;
