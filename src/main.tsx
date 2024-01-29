@@ -13,10 +13,10 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <Router>
       <Routes>
-        <Route path="/" element={<App className="slide-in-from-left" />} />
-        <Route path="/about" element={<About className="slide-in-from-left" />} />
-        <Route path="/projects" element={<Projects className="slide-in-from-left" />} />
-        <Route path="/experience" element={<Resume className="slide-in-from-left" />} />
+        <Route path="/" element={<App />} />
+        {/* <Route path="/about" element={<About className="fade-in-fwd" />} />
+        <Route path="/projects" element={<Projects className="fade-in-fwd" />} />
+        <Route path="/experience" element={<Resume className="fade-in-fwd" />} /> */}
       </Routes>
     </Router>
   </React.StrictMode>

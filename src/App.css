@@ -1,40 +1,8 @@
-#root {
-	margin: 0 auto;
-	padding: 2rem;
-	scroll-behavior: smooth;
-}
-
 .title-logo {
-	font-family: 'Silkscreen', sans-serif;
+	font-family: "Comfortaa", sans-serif;
 }
 
 section {
 	height: 100vh;
-}
-
-.code-editor-style::before {
-	content: "<>";
-	margin-bottom: 5px;
-}
-
-.code-editor-style::after {
-	content: "</>";
-	margin-top: 5px;
-}
-
-.custom-underline-blue {
-	position: relative;
-	display: inline-block;
-}
-
-.custom-underline-blue::after {
-	transition: all 0.1s ease-in-out;
-	content: "";
-	position: absolute;
-	bottom: 13.5%;
-	z-index: -1;
-	height: 0.3em;
-	width: 104%;
-	left: -1%;
-	background: linear-gradient(65deg, #2C49D8 0%, #2C49D8 100%, rgba(255, 209, 0, 0) 100%);
+	padding: 2rem;
 }
