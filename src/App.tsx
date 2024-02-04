@@ -9,7 +9,7 @@ interface AppProps {
   className?: string;
 }
 
-const App: React.FC<AppProps> = ({ className }) => {
+const App: React.FC<AppProps> = () => {
   const [isVisibleScroll, setIsVisibleScroll] = useState(false);
 
   useEffect(() => {
