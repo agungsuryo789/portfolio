@@ -1,4 +1,3 @@
-import Navbar from "../../Components/Navbar";
 import photoProfile from "../../assets/vector-photo.svg";
 
 interface AboutProps {
@@ -8,8 +7,6 @@ interface AboutProps {
 const About: React.FC<AboutProps> = ({ className }) => {
   return (
     <div className={className}>
-      <Navbar title="Agung.dev_" docTitle="Agung Suryo Sundoro | About" />
-
       <section className="flex flex-col justify-center items-center px-20">
         <h1 className="text-4xl font-bold">
           <span className="text-gray-500">/</span>About Me.
