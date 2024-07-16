@@ -1,5 +1,5 @@
 nav{
-	background-color: var(--bg-color);
+	background: transparent;
 }
 
 .nav-link {
