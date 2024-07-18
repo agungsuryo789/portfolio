@@ -1,3 +1,15 @@
 .title-logo {
 	font-family: "Comfortaa", sans-serif;
 }
+
+.terminal__icon::before {
+	content: '>';
+	margin-right: 4px;
+	font-weight: bold;
+}
+
+.quote__style {
+	border-left: 1px solid black;
+	padding: 8px;
+	background-color: rgb(255, 255, 255);
+}

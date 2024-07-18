@@ -1,0 +1,4 @@
+.experience__company::after {
+	content: '. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .';
+	font-size: 18px;
+}
