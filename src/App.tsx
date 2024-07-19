@@ -10,12 +10,14 @@ interface AppProps {
 
 const App: React.FC<AppProps> = () => {
   return (
-    <div className="grid grid-cols-1 relative xl:grid-cols-4 snap-y">
-      <Navbar />
+    <div className="grid grid-cols-1 xl:grid-cols-3 snap-y">
+      <div className="col-span-1 col-start-1 p-0 xl:col-span-1 xl:col-start-2">
+        <Navbar />
 
-      <Home />
+        <Home />
 
-      <Resume />
+        <Resume />
+      </div>
     </div>
   );
 };

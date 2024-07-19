@@ -2,60 +2,98 @@ import "./resume.css";
 
 const Resume = () => {
   return (
-    <section className="col-span-1 col-start-1 p-0 xl:col-span-2 xl:col-start-2">
+    <section>
       <div>
         <h3 className="terminal__icon text-3xl border-b-2 border-gray-500 border-solid my-6">
           Experience
         </h3>
-        <a
-          href="https://codr.id"
-          target="_blank"
-          className="flex flex-row justify-between font-semibold my-2 hover:bg-gray-300"
-        >
-          <span className="terminal__icon text-left my-auto">CODR</span>
-          <span>Front End Engineer</span>
-          <span>Feb 2022 - Present</span>
-        </a>
-        <a
-          href="https://sindata.net"
-          target="_blank"
-          className="flex flex-row justify-between font-semibold my-2 hover:bg-gray-300"
-        >
-          <span className="terminal__icon text-left my-auto">Sindata</span>
-          <span>Front End Engineer</span>
+        <div className="my-4">
+          <p className="terminal__icon hover:underline">
+            <a className="font-bold" href="https://codr.id/" target="_blank">
+              Front End Engineer - CODR
+            </a>
+          </p>
+          <span>Feb 2022 - present</span>
+          <div className="flex flex-row my-2">
+            <span className="border-dotted border-2 border-black p-2 mr-2">
+              React JS
+            </span>
+            <span className="border-dotted border-2 border-black p-2 mr-2">
+              Redux
+            </span>
+            <span className="border-dotted border-2 border-black p-2 mr-2">
+              Redux Thunk
+            </span>
+            <span className="border-dotted border-2 border-black p-2 mr-2">
+              Javascript
+            </span>
+            <span className="border-dotted border-2 border-black p-2 mr-2">
+              Chart JS
+            </span>
+            <span className="border-dotted border-2 border-black p-2 mr-2">
+              HTML & SCSS
+            </span>
+          </div>
+          <p>
+            Build and maintain critical components used to construct CSI Admin
+            Dashboard frontend, across the whole product. Work closely with
+            cross-functional teams, including developers, QA, engineering
+            manager and product managers, to implement and advocate for best
+            practices in web accessibility.
+          </p>
+        </div>
+        <div className="my-4">
+          <p className="terminal__icon hover:underline">
+            <a
+              className="font-bold"
+              href="https://sindata.net/"
+              target="_blank"
+            >
+              Front End Engineer - Sindata
+            </a>
+          </p>
           <span>Sept 2021 - Feb 2022</span>
-        </a>
-        <a
-          href="https://solusidigital.co.id/"
-          target="_blank"
-          className="flex flex-row justify-between font-semibold my-2 hover:bg-gray-300"
-        >
-          <span className="terminal__icon text-left my-auto">
-            Solusi Digital
-          </span>
-          <span>Web Developer</span>
-          <span>Feb 2020 - Oct 2020</span>
-        </a>
+          <div className="flex flex-row my-2">
+            <span className="border-dotted border-2 border-black p-2 mr-2">
+              Vue JS
+            </span>
+            <span className="border-dotted border-2 border-black p-2 mr-2">
+              Vuex
+            </span>
+            <span className="border-dotted border-2 border-black p-2 mr-2">
+              Typescript
+            </span>
+            <span className="border-dotted border-2 border-black p-2 mr-2">
+              HTML & SCSS
+            </span>
+          </div>
+          <p>
+            Developed and styled features of the Hotel Management System
+            website, such as the cart and booking sections. Work closely with
+            cross-functional teams, including developers, QA, and product
+            managers, to implement and advocate for best practices in web
+            accessibility.
+          </p>
+        </div>
       </div>
-      <div className="flex flex-col">
+      <div>
         <h3 className="terminal__icon text-3xl border-b-2 border-gray-500 border-solid my-6">
-          My Tech Stack
+          Relevant Projects
         </h3>
-        <p className="quote__style">
-          Apart from using HTML, CSS, and Javascript, i work with javascript
-          framework such as:
-        </p>
-        <span className="terminal__icon my-1">React JS, Redux, Redux Thunk</span>
-        <span className="terminal__icon my-1">Vue JS, Vuex</span>
-        <p className="quote__style">
-          Recently i'm in love with{" "}
-          <span className="text-lg font-bold">Typescript</span> and plan to use
-          it more!
-        </p>
-		<p className="quote__style my-1">In the journey of learning Fullstack development, i tinker with</p>
-		<span className="terminal__icon my-1">Node JS</span>
-		<span className="terminal__icon my-1">PostgreSQL</span>
-		<span className="terminal__icon my-1">Prisma</span>
+
+        <div className="flex flex-row border-dotted border-2 border-black p-2">
+          <img className="w-60" src="" alt="" />
+          <div>
+            <a className="font-bold text-xl" href="" target="_blank">
+              CSI Interactive Admin Dashboard
+            </a>
+            <p>
+              Interactive admin dashboard for B2B ecommerce website with key
+              features such as online chat, graphic chart, and interactive
+              tables.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );
