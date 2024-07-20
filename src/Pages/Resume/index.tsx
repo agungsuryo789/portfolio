@@ -1,3 +1,5 @@
+import Badge from "../../Components/UI/Badge";
+import Project from "./projects";
 import "./resume.css";
 
 const Resume = () => {
@@ -14,25 +16,13 @@ const Resume = () => {
             </a>
           </p>
           <span>Feb 2022 - present</span>
-          <div className="flex flex-row my-2">
-            <span className="border-dotted border-2 border-black p-2 mr-2">
-              React JS
-            </span>
-            <span className="border-dotted border-2 border-black p-2 mr-2">
-              Redux
-            </span>
-            <span className="border-dotted border-2 border-black p-2 mr-2">
-              Redux Thunk
-            </span>
-            <span className="border-dotted border-2 border-black p-2 mr-2">
-              Javascript
-            </span>
-            <span className="border-dotted border-2 border-black p-2 mr-2">
-              Chart JS
-            </span>
-            <span className="border-dotted border-2 border-black p-2 mr-2">
-              HTML & SCSS
-            </span>
+          <div className="flex flex-col my-2 py-2 xl:flex-row">
+            <Badge>React JS</Badge>
+            <Badge>Redux</Badge>
+            <Badge>Redux Thunk</Badge>
+            <Badge>Javascript</Badge>
+            <Badge>Chart JS</Badge>
+            <Badge>HTML & SCSS</Badge>
           </div>
           <p>
             Build and maintain critical components used to construct CSI Admin
@@ -53,19 +43,11 @@ const Resume = () => {
             </a>
           </p>
           <span>Sept 2021 - Feb 2022</span>
-          <div className="flex flex-row my-2">
-            <span className="border-dotted border-2 border-black p-2 mr-2">
-              Vue JS
-            </span>
-            <span className="border-dotted border-2 border-black p-2 mr-2">
-              Vuex
-            </span>
-            <span className="border-dotted border-2 border-black p-2 mr-2">
-              Typescript
-            </span>
-            <span className="border-dotted border-2 border-black p-2 mr-2">
-              HTML & SCSS
-            </span>
+          <div className="flex flex-col my-2 py-2 xl:flex-row">
+            <Badge>Vue JS</Badge>
+            <Badge>Vuex</Badge>
+            <Badge>HTML & SCSS</Badge>
+            <Badge>Typescript</Badge>
           </div>
           <p>
             Developed and styled features of the Hotel Management System
@@ -76,25 +58,8 @@ const Resume = () => {
           </p>
         </div>
       </div>
-      <div>
-        <h3 className="terminal__icon text-3xl border-b-2 border-gray-500 border-solid my-6">
-          Relevant Projects
-        </h3>
 
-        <div className="flex flex-row border-dotted border-2 border-black p-2">
-          <img className="w-60" src="" alt="" />
-          <div>
-            <a className="font-bold text-xl" href="" target="_blank">
-              CSI Interactive Admin Dashboard
-            </a>
-            <p>
-              Interactive admin dashboard for B2B ecommerce website with key
-              features such as online chat, graphic chart, and interactive
-              tables.
-            </p>
-          </div>
-        </div>
-      </div>
+      <Project />
     </section>
   );
 };

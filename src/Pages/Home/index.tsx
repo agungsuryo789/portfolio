@@ -8,7 +8,7 @@ const Home = () => {
           <h3 className="text-3xl terminal__icon font-bold my-6">hi.</h3>
           <p className="terminal__icon text-lg">
             I'm
-            <pre>{`
+            <pre className="text-sm lg:text-base xl:text-lg">{`
 ▄▀█ █▀▀ █░█ █▄░█ █▀▀   █▀ █░█ █▀█ █▄█ █▀█   █▀ █░█ █▄░█ █▀▄ █▀█ █▀█ █▀█
 █▀█ █▄█ █▄█ █░▀█ █▄█   ▄█ █▄█ █▀▄ ░█░ █▄█   ▄█ █▄█ █░▀█ █▄▀ █▄█ █▀▄ █▄█`}</pre>
           </p>
