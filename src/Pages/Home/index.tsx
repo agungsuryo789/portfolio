@@ -5,27 +5,23 @@ const Home = () => {
     <>
       <section>
         <div>
-          <h3 className="text-3xl terminal__icon font-bold my-6">hi.</h3>
-          <p className="terminal__icon text-lg">
+          <h3 className="my-6 font-bold text-3xl terminal__icon">hi.</h3>
+          <p className="text-lg terminal__icon">
             I'm
-            <pre className="text-sm lg:text-base xl:text-lg">{`
+            <pre className="text-sm lg:text-base xl:text-base">{`
 ▄▀█ █▀▀ █░█ █▄░█ █▀▀   █▀ █░█ █▀█ █▄█ █▀█   █▀ █░█ █▄░█ █▀▄ █▀█ █▀█ █▀█
 █▀█ █▄█ █▄█ █░▀█ █▄█   ▄█ █▄█ █▀▄ ░█░ █▄█   ▄█ █▄█ █░▀█ █▄▀ █▄█ █▀▄ █▄█`}</pre>
           </p>
-		  <p className="terminal__icon my-2">i like to code fun stuff.</p>
+		  <p className="my-2 terminal__icon">i like to code fun stuff.</p>
         </div>
         <div>
-          <h3 className="terminal__icon text-3xl border-b-2 border-gray-500 border-solid my-6">
+          <h3 className="border-gray-500 my-6 border-b-2 border-solid text-3xl terminal__icon">
             whoami?
           </h3>
-          <p className="terminal__icon text-lg">
+          <p className="text-lg terminal__icon">
             I'm a skilled front-end developer weaving magic with HTML, CSS, and
             JavaScript to create visually captivating interfaces. With a
             burgeoning interest in the full-stack landscape.
-          </p>
-          <p className="text-lg">
-            I’ve had the privilege of working at an Hotel software company, and
-            a software house company.
           </p>
           <p className="text-lg">
             Currently i work as Front End Developer at{" "}
