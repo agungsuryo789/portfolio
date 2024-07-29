@@ -7,7 +7,7 @@ interface CardImageProps {
 
 const CardImage: React.FC<CardImageProps> = ({ src, alt }) => {
   return (
-    <img className="w-full" src={src} alt={alt} />
+    <img className="w-80" src={src} alt={alt} />
   );
 };
 

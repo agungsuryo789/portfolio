@@ -1,3 +1,4 @@
+import Resume from "../Resume";
 import "./home.css";
 
 const Home = () => {
@@ -5,20 +6,17 @@ const Home = () => {
     <>
       <section>
         <div>
-          <h3 className="my-6 font-bold text-3xl terminal__icon">hi.</h3>
-          <p className="text-lg terminal__icon">
-            I'm
-            <pre className="text-sm lg:text-base xl:text-base">{`
-▄▀█ █▀▀ █░█ █▄░█ █▀▀   █▀ █░█ █▀█ █▄█ █▀█   █▀ █░█ █▄░█ █▀▄ █▀█ █▀█ █▀█
-█▀█ █▄█ █▄█ █░▀█ █▄█   ▄█ █▄█ █▀▄ ░█░ █▄█   ▄█ █▄█ █░▀█ █▄▀ █▄█ █▀▄ █▄█`}</pre>
+          <h3 className="my-6 px-1 font-bold text-3xl">hi.</h3>
+          <p className="text-lg">
+            I'm <span className="font-bold text-2xl">Agung Suryo Sundoro</span>
           </p>
-		  <p className="my-2 terminal__icon">i like to code fun stuff.</p>
+          <p className="my-2">i like to code fun stuff.</p>
         </div>
         <div>
-          <h3 className="border-gray-500 my-6 border-b-2 border-solid text-3xl terminal__icon">
+          <h3 className="border-2 border-gray-800 my-6 px-1 border-solid text-3xl">
             whoami?
           </h3>
-          <p className="text-lg terminal__icon">
+          <p>
             I'm a skilled front-end developer weaving magic with HTML, CSS, and
             JavaScript to create visually captivating interfaces. With a
             burgeoning interest in the full-stack landscape.
@@ -36,6 +34,8 @@ const Home = () => {
           </p>
         </div>
       </section>
+
+      <Resume />
     </>
   );
 };

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./navbar.css";
 
 const Navbar = () => {
@@ -5,10 +6,10 @@ const Navbar = () => {
     <nav className="top-0 z-10 sticky flex xl:flex-row justify-between border-2 bg-gray-300 py-2 p-0">
       <ul className="flex flex-row list-none">
         <li className="mr-4 ml-1 font-bold text-blue-800">
-          <a href="/">[Home]</a>
+          <Link to='/'>[Home]</Link>
         </li>
         <li className="mr-4 font-bold text-blue-800">
-          <a href="/projects">[Projects]</a>
+          <Link to="/projects">[Projects]</Link>
         </li>
       </ul>
       <ul className="flex flex-row list-none">
