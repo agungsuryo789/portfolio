@@ -1,13 +1,13 @@
 import React from "react";
 import { mergeClassNames } from "../utils/mergeClassNames";
 
-interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
+interface BlogSubtextProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
 }
 
-const Card: React.FC<CardProps> = ({ children, className, ...props }) => {
+const BlogSubtext: React.FC<BlogSubtextProps> = ({ children, className, ...props }) => {
   const mergedClassName = mergeClassNames(
-    "flex flex-row border-dotted border-2 border-black dark:border-white p-2",
+    "text-gray-600",
     className
   );
   return (
@@ -17,4 +17,4 @@ const Card: React.FC<CardProps> = ({ children, className, ...props }) => {
   );
 };
 
-export default Card;
+export default BlogSubtext;

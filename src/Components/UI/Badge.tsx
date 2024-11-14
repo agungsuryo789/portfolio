@@ -8,7 +8,7 @@ interface Props extends HTMLAttributes<HTMLDivElement> {
 const Badge: React.FC<Props> = ({ children, ...props }) => {
   return (
     <div>
-      <div className="border-dotted border-2 border-black w-max my-1 p-2 mr-2" {...props}>
+      <div className="border-2 border-gray-900 dark:border-gray-200 hover:bg-green-400 my-1 mr-2 p-2 border-dotted w-max hover:text-black cursor-pointer" {...props}>
         {children}
       </div>
     </div>

@@ -5,15 +5,19 @@ const Home = () => {
   return (
     <>
       <section>
-        <div>
-          <h3 className="my-6 px-1 font-bold text-3xl">hi.</h3>
-          <p className="text-lg">
-            I'm <span className="font-bold text-2xl">Agung Suryo Sundoro</span>
-          </p>
-          <p className="my-2">i like to code fun stuff.</p>
+        <div className="flex flex-row">
+          <img src="" alt="profile" className="border-1 bg-white mx-2 my-auto rounded-full h-24" />
+          <div>
+            <h3 className="my-6 px-1 font-bold text-3xl">hi.</h3>
+            <p className="text-lg">
+              I'm{" "}
+              <span className="font-bold text-2xl">Agung Suryo Sundoro</span>
+            </p>
+            <p className="my-2">i like to code fun stuff.</p>
+          </div>
         </div>
         <div>
-          <h3 className="border-2 border-gray-800 my-6 px-1 border-solid text-3xl">
+		<h3 className="hover:border-1 hover:bg-green-400 my-6 px-1 border-b-2 border-b-green-500 border-solid text-3xl dark:hover:text-gray-900 cursor-default">
             whoami?
           </h3>
           <p>

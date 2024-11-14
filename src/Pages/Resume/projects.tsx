@@ -8,8 +8,8 @@ import tiarahijabers from '../../assets/images/tiarahijabers_homepage.jpeg'
 const Project = () => {
   return (
     <div>
-      <h3 className="border-2 border-gray-800 my-6 border-solid text-3xl">
-        Recent Projects
+      <h3 className="my-6 px-1 border-b-2 border-b-green-500 border-solid text-3xl">
+        Past Projects
       </h3>
 
       <Card className="my-2">
