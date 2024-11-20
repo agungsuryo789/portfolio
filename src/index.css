@@ -3,30 +3,49 @@
 @tailwind utilities;
 
 :root {
-	--main-color: #286f6c;
-	--bg-color: #f8f7f1;
-	--sec-color: #0d2f3f;
+  --main-color: #286f6c;
+  --bg-color: #f8f7f1;
+  --sec-color: #0d2f3f;
 
-	font-synthesis: none;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 * {
-	min-width: 0;
-	line-height: 2;
-	font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-	font-size: 12px;
-	padding: 0px;
-	scroll-behavior: smooth !important;
-	letter-spacing: 1.2px;
+  min-width: 0;
+  font-family: "Onest", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 14px;
+  padding: 0px;
+  scroll-behavior: smooth !important;
+  letter-spacing: 1.2px;
 }
 
 body {
-	background-color: #f1f1f1;
+  background-color: #f1f1f1;
 }
 
-p, span{
-	padding: 0 5px;
+p,
+span {
+  padding: 0 5px;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@layer utilities {
+  .animate-blink {
+    animation: blink 1s step-start infinite;
+  }
+  .shadow-gradient {
+    box-shadow:
+      0 0 20px rgba(255, 0, 150, 0.5),
+      0 0 30px rgba(0, 204, 255, 0.5);
+  }
 }

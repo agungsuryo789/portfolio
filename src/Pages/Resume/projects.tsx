@@ -1,6 +1,6 @@
-import Card from "../../Components/UI/Card";
-import CardImage from "../../Components/UI/CardImage";
-import CardBody from "../../Components/UI/CardBody";
+import Card from "../../Components/UI/Card/Card";
+import CardImage from "../../Components/UI/Card/CardImage";
+import CardBody from "../../Components/UI/Card/CardBody";
 
 import csiapp from '../../assets/images/csi_admin_chat.png'
 import tiarahijabers from '../../assets/images/tiarahijabers_homepage.jpeg'

@@ -1,0 +1,43 @@
+.music-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 20px;
+}
+
+.bar {
+  width: 4px;
+  height: 50%;
+  background: #575757;
+  animation: bouncing 1s infinite ease-in-out;
+  border-radius: 5px;
+  -webkit-animation: bouncing 1s infinite ease-in-out;
+}
+
+/* Make each bar's animation start at a different time */
+.bar:nth-child(1) {
+  animation-delay: 0s;
+}
+.bar:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.bar:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.bar:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.bar:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+/* Bounce animation */
+@keyframes bouncing {
+  0%,
+  100% {
+    transform: scaleY(0.5); /* Shrink */
+  }
+  50% {
+    transform: scaleY(1.5); /* Stretch */
+  }
+}

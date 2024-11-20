@@ -1,5 +1,5 @@
 import React from "react";
-import { mergeClassNames } from "../utils/mergeClassNames";
+import { mergeClassNames } from "../../utils/mergeClassNames";
 
 interface BlogBodyProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;

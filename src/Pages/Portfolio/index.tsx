@@ -1,7 +1,11 @@
 import { useState } from "react";
-import Card from "../../Components/UI/Card";
-import CardBody from "../../Components/UI/CardBody";
-import CardImage from "../../Components/UI/CardImage";
+
+import Blog from "../../Components/UI/Blog/Blog";
+import BlogSubtext from "../../Components/UI/Blog/BlogSubtext";
+import BlogBody from "../../Components/UI/Blog/BlogBody";
+import Card from "../../Components/UI/Card/Card";
+import CardBody from "../../Components/UI/Card/CardBody";
+import CardImage from "../../Components/UI/Card/CardImage";
 
 import csiapp from "../../assets/images/csi_admin_chat.png";
 import tiarahijabers from "../../assets/images/tiarahijabers_homepage.jpeg";
@@ -26,12 +30,20 @@ const Portfolio = () => {
       </Card>
       <div
         onClick={() => setAccordion(0)}
-		className={`cursor-pointer border-2 border-dotted border-gray-900 dark:border-white ${accordion === 1 ? "block" : "hidden"}`}
+        className={`cursor-pointer border-2 border-dotted border-gray-900 dark:border-white ${accordion === 1 ? "block" : "hidden"}`}
       >
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita iste
-        minus provident rerum delectus. Sed aspernatur explicabo eveniet.
-        Reiciendis quidem consequuntur quas rerum libero amet excepturi
-        laboriosam possimus dolores minus!
+        <Blog title="CSI Admin DashBoard">
+          <BlogSubtext>{"2024-11-14"}</BlogSubtext>
+          <BlogBody>
+            Interactive admin dashboard for B2B e-commerce website with key
+            features such as online chat, graphic chart, and interactive tables.
+            tech stack: <br />
+            <span className="font-extrabold underline">Reactjs</span>
+            <span className="font-extrabold underline">Redux</span>
+            <span className="font-extrabold underline">Bootstrap</span>
+            <span className="font-extrabold underline">Tailwind</span>
+          </BlogBody>
+        </Blog>
       </div>
       <Card className="flex lg:flex-row xl:flex-row flex-col border-0 my-2">
         <CardImage src={tiarahijabers} alt="tiara hijaber website screenshot" />
@@ -49,12 +61,19 @@ const Portfolio = () => {
       </Card>
       <div
         onClick={() => setAccordion(0)}
-		className={`cursor-pointer border-2 border-dotted border-gray-900 dark:border-white ${accordion === 2 ? "block" : "hidden"}`}
+        className={`cursor-pointer border-2 border-dotted border-gray-900 dark:border-white ${accordion === 2 ? "block" : "hidden"}`}
       >
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti esse
-        necessitatibus voluptatibus maxime! Consequuntur facilis officiis
-        dolorum blanditiis? Est minima sit veritatis quis et doloribus
-        blanditiis illum, soluta sint perspiciatis.
+        <Blog title="Tiara Hijabers">
+          <BlogSubtext>{"2024-11-14"}</BlogSubtext>
+          <BlogBody>
+            Online Shop website with key features such as product page, cart,
+            and third-app payment gateway Midtrans. Tech stack: <br />
+            <span className="font-extrabold underline">PHP</span>
+            <span className="font-extrabold underline">Code Igniter</span>
+            <span className="font-extrabold underline">Bootstrap</span>
+            <span className="font-extrabold underline">Mysql</span>
+          </BlogBody>
+        </Blog>
       </div>
     </div>
   );
