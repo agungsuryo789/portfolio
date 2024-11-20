@@ -33,13 +33,13 @@ const Navbar = () => {
       </ul>
       <ul className="flex flex-row list-none">
         <li className={`mr-4 ml-1 font-bold dark:text-green-400 text-gray-900`}>
-          {/* <button onClick={toggleDark}>
+          <button onClick={toggleDark}>
             {isDark ? (
               <i className="text-2xl fa fa-sun-o" aria-hidden="true"></i>
             ) : (
               <i className="text-2xl fa fa-moon-o" aria-hidden="true"></i>
             )}
-          </button> */}
+          </button>
         </li>
       </ul>
     </nav>
