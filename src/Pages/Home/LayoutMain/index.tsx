@@ -1,14 +1,11 @@
 import { Card, CardTitle } from "../../../Components/UI/Card";
 import { Spotify } from "react-spotify-embed";
 import MusicBars from "../../../Components/UI/MusicBar";
+import CardProject from "./cardProject";
+import CardTechstack from "./cardTechstack";
+import CardBlog from "./cardBlog";
 
 import map from "../../../assets/images/yogyakarta.png";
-import iconjs from "../../../assets/icon dev/js.png";
-import iconreact from "../../../assets/icon dev/atom.png";
-import iconnodejs from "../../../assets/icon dev/nodejs.png";
-import iconpostgre from "../../../assets/icon dev/postgre.png";
-import iconts from "../../../assets/icon dev/typescript.png";
-import iconvue from "../../../assets/icon dev/vuejs.png";
 
 const LayoutMain = () => {
   return (
@@ -72,22 +69,7 @@ const LayoutMain = () => {
           </Card>
         </div>
         <div className="flex flex-col gap-2 col-span-10 lg:col-span-4 xl:col-span-4">
-          <Card className="relative z-10 flex flex-col border-4 border-white min-h-80 overflow-hidden">
-            <CardTitle>
-              <i className="mr-2 fa fa-pencil-square-o" aria-hidden="true"></i>
-              Blog
-            </CardTitle>
-            <div className="top-2/5 -z-50 absolute bg-gradient-to-bl from-sky-400 to-sky-200 bg-opacity-80 p-2 rounded-xl w-full h-40 transition hover:-translate-y-20 duration-200 delay-100 -rotate-6">
-              <p className="font-semibold text-base text-sky-600">
-                Under Development
-              </p>
-            </div>
-
-            <button className="bottom-2 left-2 absolute border-1 bg-white shadow-xl my-auto px-4 py-2 rounded-2xl w-max">
-              Read More
-              <i className="fa-caret-right ml-2 fa" aria-hidden="true"></i>
-            </button>
-          </Card>
+          <CardBlog />
         </div>
         <Card className="col-span-10 xl:col-span-5">
           <CardTitle>
@@ -96,86 +78,14 @@ const LayoutMain = () => {
           </CardTitle>
           <p>Under Development</p>
         </Card>
-        <Card className="col-span-10 xl:col-span-5">
-          <CardTitle>
-            <i className="my-auto mr-2 fa fa-code" aria-hidden="true"></i>
-            Projects
-          </CardTitle>
-          <p>Under Development</p>
-        </Card>
-        <Card className="col-span-10 xl:col-span-5 h-fit">
-          <CardTitle>
-            <i className="my-auto mr-2 fa fa-code" aria-hidden="true"></i>Tech
-            Stack I used
-          </CardTitle>
-          <ul className="gap-4 grid grid-cols-2 py-4">
-            <li>
-              <i className="mr-2 fa fa-html5" aria-hidden="true"></i>
-              HTML, CSS
-            </li>
-            <li className="flex">
-              <img
-                src={iconjs}
-                alt="icon of Javascript"
-                className="my-auto mr-2 w-4 h-4"
-              />
-              Javascript
-            </li>
-            <li className="flex">
-              <img
-                src={iconts}
-                alt="icon of Typescript"
-                className="my-auto mr-2 w-4 h-4"
-              />
-              Typescript
-            </li>
-            <li className="flex">
-              <img
-                src={iconnodejs}
-                alt="icon of Node JS"
-                className="my-auto mr-2 w-4 h-4"
-              />
-              Node JS
-            </li>
-            <li className="flex">
-              <img
-                src={iconreact}
-                alt="icon of ReactJS"
-                className="my-auto mr-2 w-4 h-4"
-              />
-              ReactJS
-            </li>
-            <li className="flex">
-              <img
-                src={iconreact}
-                alt="icon of Next JS"
-                className="my-auto mr-2 w-4 h-4"
-              />
-              Next JS
-            </li>
-            <li className="flex">
-              <img
-                src={iconvue}
-                alt="icon of VueJs"
-                className="my-auto mr-2 w-4 h-4"
-              />
-              VueJs
-            </li>
-            <li className="flex">
-              <img
-                src={iconpostgre}
-                alt="icon of VueJs"
-                className="my-auto mr-2 w-4 h-4"
-              />
-              Postgre SQL
-            </li>
-          </ul>
-        </Card>
-
+        <CardProject />
+        <CardTechstack />
         <div className="col-span-10 xl:col-span-4 h-fit">
           <CardTitle className="flex gap-2">
             <MusicBars />
-            Currently Listening to
+            <span className="p-0 dark:text-gray-100">
+              Currently Listening to
+            </span>
           </CardTitle>
           <Spotify
             height="200px"

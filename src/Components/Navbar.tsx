@@ -23,16 +23,20 @@ const Navbar = () => {
 
   return (
     <nav className="top-0 z-10 sticky flex xl:flex-row justify-between bg-gray-50 dark:bg-gray-800 shadow-sm px-2 py-4 border-b-2">
-      <ul className="flex flex-row list-none">
-        <li className="mr-4 ml-1 font-bold text-gray-900 dark:text-green-500">
-          <Link className="text-lg" to="/">[Home]</Link>
+	  <ul className="flex flex-row list-none">
+        <li className="mr-4 ml-1 font-bold text-gray-900 dark:text-gray-100 hover:-rotate-12 transition duration-150 delay-100">
+          <Link className="text-lg" to="/">
+            {"/Home"}
+          </Link>
         </li>
-        <li className="mr-4 font-bold text-gray-900 dark:text-green-500">
-          <Link className="text-lg"to="/projects">[Projects]</Link>
+        <li className="mr-4 font-bold text-gray-900 dark:text-gray-100 hover:-rotate-12 transition duration-150 delay-100">
+          <Link className="text-lg" to="/projects">
+            {"/Projects"}
+          </Link>
         </li>
       </ul>
       <ul className="flex flex-row list-none">
-        <li className={`mr-4 ml-1 font-bold dark:text-green-400 text-gray-900`}>
+        <li className={`mr-4 ml-1 font-bold dark:text-gray-100 text-gray-900 hover:rotate-12 transition duration-150 delay-100`}>
           <button onClick={toggleDark}>
             {isDark ? (
               <i className="text-2xl fa fa-sun-o" aria-hidden="true"></i>
