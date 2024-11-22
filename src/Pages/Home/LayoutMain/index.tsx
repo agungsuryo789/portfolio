@@ -5,6 +5,7 @@ import CardProject from "./cardProject";
 import CardTechstack from "./cardTechstack";
 import CardBlog from "./cardBlog";
 import CardExperience from "./cardExperience";
+import GitHubCalendar from "react-github-calendar";
 
 import map from "../../../assets/images/yogyakarta.png";
 
@@ -72,7 +73,7 @@ const LayoutMain = () => {
         <div className="flex flex-col gap-2 col-span-10 lg:col-span-4 xl:col-span-4">
           <CardBlog />
         </div>
-        <CardExperience/>
+        <CardExperience />
         <CardProject />
         <CardTechstack />
         <div className="col-span-10 xl:col-span-4 h-fit">
@@ -87,6 +88,14 @@ const LayoutMain = () => {
             className="hover:scale-105 hover:transition hover:duration-300 hover:delay-150"
             link="https://open.spotify.com/track/0BxE4FqsDD1Ot4YuBXwAPp?si=793be8adfd6542d3"
           />
+        </div>
+        <div className="col-span-10 xl:col-span-5 bg-white h-auto">
+          <Card className="border-4 border-white">
+            <CardTitle>
+              <i className="fa fa-github-alt" aria-hidden="true"></i> Github
+            </CardTitle>
+            <GitHubCalendar username="agungsuryo789" colorScheme="light" />
+          </Card>
         </div>
       </section>
     </>
