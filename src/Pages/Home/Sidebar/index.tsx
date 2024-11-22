@@ -8,7 +8,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <section className="col-span-1 xl:col-span-2 shadow-xl px-2 py-4 dark:border-r-white dark:border-r-2">
+      <section className="col-span-1 xl:col-span-2 bg-slate-100 dark:bg-gray-800 shadow-lg dark:shadow-sky-800 px-2 py-4">
         <div className="flex flex-col">
           <img
             src={isHover ? ava_smile : ava}

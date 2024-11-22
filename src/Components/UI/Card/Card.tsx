@@ -20,7 +20,7 @@ const Card: React.FC<CardProps> = ({ children, className, ...props }) => {
   };
 
   const mergedClassName = mergeClassNames(
-    `border-4 border-white bg-gray-50 shadow-xl rounded-xl p-2
+    `border-4 border-white bg-slate-100 shadow-xl rounded-xl p-2
      hover:transition-transform duration-100 cursor-default dark:text-gray-700 dark:border-sky-800`,
     className
   );

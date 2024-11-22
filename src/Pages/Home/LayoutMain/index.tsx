@@ -4,6 +4,7 @@ import MusicBars from "../../../Components/UI/MusicBar";
 import CardProject from "./cardProject";
 import CardTechstack from "./cardTechstack";
 import CardBlog from "./cardBlog";
+import CardExperience from "./cardExperience";
 
 import map from "../../../assets/images/yogyakarta.png";
 
@@ -71,13 +72,7 @@ const LayoutMain = () => {
         <div className="flex flex-col gap-2 col-span-10 lg:col-span-4 xl:col-span-4">
           <CardBlog />
         </div>
-        <Card className="col-span-10 xl:col-span-5">
-          <CardTitle>
-            <i className="my-auto mr-2 fa fa-code" aria-hidden="true"></i>
-            Experience
-          </CardTitle>
-          <p>Under Development</p>
-        </Card>
+        <CardExperience/>
         <CardProject />
         <CardTechstack />
         <div className="col-span-10 xl:col-span-4 h-fit">
