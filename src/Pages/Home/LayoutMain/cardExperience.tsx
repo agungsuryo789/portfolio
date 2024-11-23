@@ -52,7 +52,7 @@ const CardExperience = () => {
           ref={carouselRef}
           className="flex flex-row p-2 max-w-full min-h-44 transition duration-150 delay-150 overflow-x-hidden overflow-y-hidden"
         >
-          <div className="py-2 min-w-full h-44">
+          <div className="mr-2 py-2 min-w-full h-44">
             <p>Frontend Developer</p>
             <a href="https://codr.id" target="_blank">
               <p>CODR</p>
@@ -65,7 +65,7 @@ const CardExperience = () => {
               <div className="top-1/2 left-0 absolute bg-slate-600 w-full h-1"></div>
             </div>
           </div>
-          <div className="py-2 min-w-full h-44">
+          <div className="mr-2 py-2 min-w-full h-44">
             <p>Frontend Developer</p>
             <a href="https://sindata.net" target="_blank">
               <p>Sindata</p>
@@ -78,7 +78,7 @@ const CardExperience = () => {
               <div className="top-1/2 left-0 absolute bg-slate-600 w-full h-1"></div>
             </div>
           </div>
-          <div className="py-2 min-w-full h-44">
+          <div className="mr-2 py-2 min-w-full h-44">
             <p>Web Developer</p>
             <a href="https://solusidigital.co.id" target="_blank">
               <p>Solusi Digital</p>
@@ -93,11 +93,17 @@ const CardExperience = () => {
           </div>
         </div>
         <div className="flex flex-row justify-center gap-3 p-2">
-          <button onClick={handlePrev} className="shadow-md rounded-lg w-full">
-            prev
+          <button
+            onClick={handlePrev}
+            className="shadow-md py-2 rounded-lg w-20 hover:scale-110 transition duration-100"
+          >
+            <i className="fa-chevron-left fa" aria-hidden="true"></i>
           </button>
-          <button onClick={handleNext} className="shadow-md rounded-lg w-full">
-            next
+          <button
+            onClick={handleNext}
+            className="shadow-md py-2 rounded-lg w-20 hover:scale-110 transition duration-100"
+          >
+            <i className="fa-chevron-right fa" aria-hidden="true"></i>
           </button>
         </div>
       </Card>

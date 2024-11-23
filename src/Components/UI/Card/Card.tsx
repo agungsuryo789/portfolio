@@ -10,8 +10,9 @@ const Card: React.FC<CardProps> = ({ children, className, ...props }) => {
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     const rect = e.currentTarget.getBoundingClientRect();
-    const x = ((e.clientX - rect.left) / rect.width - 0.5) * 35; 
-    const y = ((e.clientY - rect.top) / rect.height - 0.5) * 35;
+
+    const x = ((e.clientX - rect.left) / rect.width - 0.5) * 20;
+    const y = ((e.clientY - rect.top) / rect.height - 0.5) * 20;
     setRotation({ x: -y, y: x });
   };
 
@@ -20,8 +21,8 @@ const Card: React.FC<CardProps> = ({ children, className, ...props }) => {
   };
 
   const mergedClassName = mergeClassNames(
-    `border-4 border-white bg-slate-100 shadow-xl rounded-xl p-2
-     hover:transition-transform duration-100 cursor-default dark:text-gray-700 dark:border-sky-800`,
+    `border-4 border-white bg-slate-100 shadow-xl rounded-lg p-2
+     hover:transition-transform duration-150 cursor-default dark:text-gray-700 dark:border-sky-800 perspective-distant`,
     className
   );
 
@@ -31,7 +32,6 @@ const Card: React.FC<CardProps> = ({ children, className, ...props }) => {
       {...props}
       style={{
         transform: `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`,
-        perspective: "800px",
       }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}

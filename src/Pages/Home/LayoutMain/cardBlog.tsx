@@ -7,12 +7,12 @@ const CardBlog = () => {
           <i className="mr-2 fa fa-pencil-square-o" aria-hidden="true"></i>
           Blog
         </CardTitle>
-        <div className="top-2/5 -z-40 absolute bg-gradient-to-bl from-sky-400 to-sky-200 bg-opacity-80 p-2 rounded-xl w-full h-40 transition group-hover:-translate-y-6 duration-200 delay-100 -rotate-6">
+        <div className="top-2/5 -z-40 absolute border-2 border-sky-600 bg-sky-200 p-2 rounded-xl w-full h-40 transition group-hover:-translate-y-6 duration-200 delay-100 -rotate-6">
           <p className="font-semibold text-base text-sky-600">
             Under Development
           </p>
         </div>
-        <div className="top-2/5 -z-50 absolute bg-gradient-to-bl from-amber-600 to-amber-300 bg-opacity-80 p-2 rounded-xl w-full h-40 transition group-hover:-translate-y-14 duration-200 delay-100 -rotate-6">
+        <div className="top-2/5 -z-50 absolute border-2 border-amber-600 bg-amber-200 p-2 rounded-xl w-full h-40 transition group-hover:-translate-y-14 duration-200 delay-100 -rotate-6">
           <p className="font-semibold text-base text-sky-600">
             Under Development
           </p>

@@ -16,9 +16,9 @@ const CardTitle: React.FC<CardTitleProps> = ({
   );
 
   return (
-    <>
-      <p className={mergedClassName} {...props}>{children}</p>
-    </>
+    <p className={mergedClassName} {...props}>
+      {children}
+    </p>
   );
 };
 
