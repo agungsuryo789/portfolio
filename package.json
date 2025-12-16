@@ -1,10 +1,14 @@
 {
-  "name": "portfolio-react",
+  "name": "portfolio",
   "private": true,
   "author": "Agung Suryo Sundoro",
   "version": "1.0.0",
   "type": "module",
   "homepage": "https://agungsuryo789.github.io/portfolio",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agungsuryo789/portfolio.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
