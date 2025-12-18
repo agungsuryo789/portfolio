@@ -12,7 +12,7 @@ interface AppProps {
 const App: React.FC<AppProps> = () => {
   return (
     <ThemeProvider>
-      <div className="flex flex-col bg-white dark:bg-gray-800 px-0 min-h-screen text-gray-900 dark:text-gray-300">
+      <div className="flex flex-col bg-white dark:bg-slate-950 px-0 min-h-screen text-gray-900 dark:text-gray-300">
         <div className="w-full">
           <Navbar />
         </div>

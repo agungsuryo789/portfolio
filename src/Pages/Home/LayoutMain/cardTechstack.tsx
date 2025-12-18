@@ -10,12 +10,12 @@ import iconvue from "../../../assets/icon dev/vuejs.png";
 const CardTechstack = () => {
   return (
     <>
-      <Card className="col-span-10 xl:col-span-5 h-fit">
-        <CardTitle>
+      <Card className="border-[1px] border-black col-span-10 xl:col-span-5 h-fit rounded-md">
+        <CardTitle className="bg-gradient-to-t from-red-200 via-red-300 to-red-50">
           <i className="my-auto mr-2 fa fa-code" aria-hidden="true"></i>Tech
           Stack I used
         </CardTitle>
-        <ul className="gap-4 grid grid-cols-2 py-4">
+        <ul className="gap-4 grid grid-cols-2 py-4 mx-4">
           <li>
             <i className="mr-2 fa fa-html5" aria-hidden="true"></i>
             HTML, CSS

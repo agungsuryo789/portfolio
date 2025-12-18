@@ -11,7 +11,7 @@ const CardTitle: React.FC<CardTitleProps> = ({
   ...props
 }) => {
   const mergedClassName = mergeClassNames(
-    `my-4 font-semibold text-gray-500 text-base uppercase`,
+    `mt-0 bg-gradient-to-b from-sky-200 via-sky-300 to-sky-100 mb-2 py-1 border-b-[1px] border-black text-black text-base dark:border-white`,
     className
   );
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { mergeClassNames } from "../../utils/mergeClassNames";
 
 interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -6,23 +6,10 @@ interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const Card: React.FC<CardProps> = ({ children, className, ...props }) => {
-  const [rotation, setRotation] = useState({ x: 0, y: 0 });
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-
-    const x = ((e.clientX - rect.left) / rect.width - 0.5) * 20;
-    const y = ((e.clientY - rect.top) / rect.height - 0.5) * 20;
-    setRotation({ x: -y, y: x });
-  };
-
-  const handleMouseLeave = () => {
-    setRotation({ x: 0, y: 0 });
-  };
 
   const mergedClassName = mergeClassNames(
-    `border-4 border-white bg-slate-100 shadow-xl rounded-lg p-2
-     hover:transition-transform duration-150 cursor-default dark:text-gray-700 dark:border-sky-800 perspective-distant`,
+    `border-4 border-black bg-white shadow-xl rounded-md p-0 dark:border-white dark:bg-slate-950
+      cursor-default dark:text-white`,
     className
   );
 
@@ -30,11 +17,6 @@ const Card: React.FC<CardProps> = ({ children, className, ...props }) => {
     <div
       className={mergedClassName}
       {...props}
-      style={{
-        transform: `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`,
-      }}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
     >
       {children}
     </div>

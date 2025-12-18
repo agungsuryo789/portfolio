@@ -1,101 +1,70 @@
 import { Card, CardTitle } from "../../../Components/UI/Card";
-import { Spotify } from "react-spotify-embed";
-import MusicBars from "../../../Components/UI/MusicBar";
 import CardProject from "./cardProject";
-import CardTechstack from "./cardTechstack";
 import CardBlog from "./cardBlog";
-import CardExperience from "./cardExperience";
-import GitHubCalendar from "react-github-calendar";
-
-import map from "../../../assets/images/yogyakarta.png";
 
 const LayoutMain = () => {
   return (
     <>
-      <section className="gap-2 xl:gap-4 grid grid-cols-10 grid-flow-row col-span-1 xl:col-span-6 p-2">
-        <div className="flex flex-col gap-2 col-span-10 md:col-span-5 lg:col-span-3 xl:col-span-3 h-auto">
-          <Card className="border-4 border-white">
-            <CardTitle>
-              <i className="mr-4 fa fa-podcast" aria-hidden="true"></i>Status
-            </CardTitle>
-            <p className="my-4 font-bold text-2xl uppercase">
-              <i
-                className="mr-4 text-orange-500 animate-pulse fa fa-circle"
-                aria-hidden="true"
-              ></i>
-              Away
+      <section className="p-2 col-start-1 xl:col-start-2 xl:col-span-3 gap-4">
+        {/* ABOUT */}
+        <div className="mb-4 break-inside-avoid inline-block w-full max-w-full overflow-hidden">
+          <div className="flex flex-col">
+            <h3 className="mx-0 my-6 p-0 font-bold text-5xl text-center">
+              Hi! i'm Agung
+              <span className="m-0 p-0 font-bold text-3xl animate-blink">
+                |
+              </span>
+            </h3>
+            <p className="mx-0 my-2 p-0">
+              <a
+                href="https://drive.google.com/file/d/1v17GWuNlippZbQkw7AUdLfrT-YsIGcel/view?usp=sharing"
+                target="_blank"
+                className="font-semibold hover:underline"
+              >
+                Full-stack developer
+              </a>{" "}
+              with 3+ years of experience working across React.js, Next.js,
+              APIs, and relational databases, turning real business requirements
+              into reliable, production-ready web applications.
             </p>
-          </Card>
-          <Card className="border-4 border-white">
-            <CardTitle>
-              <i className="mr-4 fa fa-commenting" aria-hidden="true"></i>React
-              out to me at
-            </CardTitle>
-            <div className="flex flex-row gap-4 ml-2">
-              <a
-                className="hover:scale-110 transition delay-100"
-                href="mailto:agungsuryo645@gmail.com"
-              >
-                <i className="text-2xl fa fa-envelope" aria-hidden="true"></i>
-              </a>
-              <a
-                className="hover:scale-110 transition delay-100"
-                href="https://github.com/agungsuryo789"
-                target="_blank"
-              >
-                <i className="text-2xl fa fa-github" aria-hidden="true"></i>
-              </a>
-              <a
-                className="hover:scale-110 transition delay-100"
-                href="https://www.linkedin.com/in/agungsuryo/"
-                target="_blank"
-              >
-                <i
-                  className="text-2xl fa fa-linkedin-square"
-                  aria-hidden="true"
-                ></i>
-              </a>
-            </div>
-          </Card>
+          </div>
         </div>
-        <div className="col-span-10 md:col-span-5 lg:col-span-3 xl:col-span-3">
-          <Card className="relative border-8 border-white min-h-80">
-            <img
-              src={map}
-              alt="map of yogyakarta, indonesia"
-              className="w-full h-full"
-            />
-            <div className="top-1/3 left-2/5 absolute border-4 border-white bg-gradient-to-bl from-red-600 to-rose-500 shadow-gradient px-4 py-2 rounded-full animate-bounce">
-              <i className="fa-map-marker text-xl fa" aria-hidden="true"></i>
-            </div>
-          </Card>
+
+        {/* PROJECT */}
+        <div className="mb-4 break-inside-avoid inline-block w-full max-w-full overflow-hidden">
+          <CardProject />
         </div>
-        <div className="flex flex-col gap-2 col-span-10 lg:col-span-4 xl:col-span-4">
+
+        {/* BLOG */}
+        <div className="mb-4 break-inside-avoid inline-block w-full max-w-full overflow-hidden">
           <CardBlog />
         </div>
-        <CardExperience />
-        <CardProject />
-        <CardTechstack />
-        <div className="col-span-10 xl:col-span-4 h-fit">
-          <CardTitle className="flex gap-2">
-            <MusicBars />
-            <span className="p-0 dark:text-gray-100">
-              Currently Listening to
-            </span>
-          </CardTitle>
-          <Spotify
-            height="200px"
-            className="hover:scale-105 hover:transition hover:duration-300 hover:delay-150"
-            link="https://open.spotify.com/track/0BxE4FqsDD1Ot4YuBXwAPp?si=793be8adfd6542d3"
-          />
-        </div>
-        <div className="col-span-10 xl:col-span-5 bg-white h-auto">
-          <Card className="border-4 border-white">
-            <CardTitle>
-              <i className="fa fa-github-alt" aria-hidden="true"></i> Github
-            </CardTitle>
-            <GitHubCalendar username="agungsuryo789" colorScheme="light" />
-          </Card>
+
+        {/* CONTACT */}
+        <div className="mb-4 break-inside-avoid inline-block w-full max-w-full overflow-hidden">
+          <div className="flex flex-col gap-2">
+            <Card className="border-[1px] border-black w-full">
+              <CardTitle>
+                <i className="mr-4 fa fa-commenting" /> Contact me at
+              </CardTitle>
+              <div className="flex gap-8 ml-2 w-full justify-start px-6">
+                <a href="mailto:agungsuryo645@gmail.com">
+                  <i className="text-2xl fa fa-envelope" />
+                </a>
+                <span className="mx-2 text-2xl">|</span>
+                <a href="https://github.com/agungsuryo789" target="_blank">
+                  <i className="text-2xl fa fa-github" />
+                </a>
+                <span className="mx-2 text-2xl">|</span>
+                <a
+                  href="https://www.linkedin.com/in/agungsuryo/"
+                  target="_blank"
+                >
+                  <i className="text-2xl fa fa-linkedin-square" />
+                </a>
+              </div>
+            </Card>
+          </div>
         </div>
       </section>
     </>

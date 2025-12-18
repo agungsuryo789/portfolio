@@ -1,27 +1,32 @@
 import { Card, CardTitle } from "../../../Components/UI/Card";
+import { Link } from "react-router-dom";
+
 const CardBlog = () => {
   return (
     <>
-      <Card className="relative z-10 flex flex-col border-4 border-white min-h-80 overflow-hidden group">
-        <CardTitle>
+      <Card className="relative z-10 flex flex-col border-[1px] border-black dark:border-white min-h-80 group dark:text-black">
+        <CardTitle className="bg-gradient-to-b from-pink-200 via-pink-400 to-pink-50 text-black flex gap-2">
           <i className="mr-2 fa fa-pencil-square-o" aria-hidden="true"></i>
-          Blog
+          Latest Post
         </CardTitle>
-        <div className="top-2/5 -z-40 absolute border-2 border-sky-600 bg-sky-200 p-2 rounded-xl w-full h-40 transition group-hover:-translate-y-6 duration-200 delay-100 -rotate-6">
-          <p className="font-semibold text-base text-sky-600">
-            Under Development
-          </p>
-        </div>
-        <div className="top-2/5 -z-50 absolute border-2 border-amber-600 bg-amber-200 p-2 rounded-xl w-full h-40 transition group-hover:-translate-y-14 duration-200 delay-100 -rotate-6">
-          <p className="font-semibold text-base text-sky-600">
-            Under Development
-          </p>
-        </div>
 
-        <button className="bottom-2 left-2 absolute border-1 bg-white shadow-xl my-auto px-4 py-2 rounded-2xl w-max">
-          Read More
-          <i className="fa-caret-right my-auto ml-2 fa" aria-hidden="true"></i>
-        </button>
+        <div className="flex flex-col w-full overflow-auto">
+          <Link to="/blog/coming-soon" className="no-underline text-inherit hover:cursor-pointer hover:underline">
+            <div className="flex flex-row justify-between p-2 w-full gap-4">
+              <div className="flex flex-col min-w-0 flex-1">
+                <h4 className="font-bold text-md">Coming Soon</h4>
+                <p className="text-sm mx-0 px-0 break-words">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolores deleniti quod velit eius totam possimus blanditiis
+                  corrupti
+                </p>
+              </div>
+              <p className="text-sm text-gray-700 italic whitespace-nowrap">
+                20.08.2025
+              </p>
+            </div>
+          </Link>
+        </div>
       </Card>
     </>
   );

@@ -4,6 +4,7 @@ import App from "../App";
 import Home from "../Pages/Home";
 import Portfolio from "../Pages/Portfolio";
 import ErrorPage from "../Pages/ErrorPage";
+import BlogPage from "../Pages/Blog";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
         path: "/projects",
         element: <Portfolio />,
       },
+      {
+        path: "/blog",
+        element: <BlogPage />,
+      }
     ],
   },
 ], {
